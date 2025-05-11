@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CogPool" load_steps=7 format=3 uid="uid://ds5xsbdjxwgni"]
+
+[ext_resource type="Script" uid="uid://okjbx502s3r5" path="res://objects/cog/cogdna.gd" id="1_ober3"]
+[ext_resource type="Resource" uid="uid://bkkauwbcsnukc" path="res://objects/cog/presets/sellbot/traffic_manager.tres" id="2_wycdv"]
+[ext_resource type="Resource" uid="uid://bkkkabh3sre13" path="res://objects/cog/presets/cashbot/bookkeeper.tres" id="3_0tj7j"]
+[ext_resource type="Resource" uid="uid://ckn41hxv8gwaw" path="res://objects/cog/presets/lawbot/whistleblower.tres" id="4_yr4s0"]
+[ext_resource type="Resource" uid="uid://ba7yjm7wpt1fu" path="res://objects/cog/presets/bossbot/union_buster.tres" id="5_i56de"]
+[ext_resource type="Script" uid="uid://ocitcstc3bru" path="res://objects/cog/cog_pool.gd" id="6_6sdvi"]
+
+[resource]
+script = ExtResource("6_6sdvi")
+cogs = Array[ExtResource("1_ober3")]([ExtResource("2_wycdv"), ExtResource("3_0tj7j"), ExtResource("4_yr4s0"), ExtResource("5_i56de")])
