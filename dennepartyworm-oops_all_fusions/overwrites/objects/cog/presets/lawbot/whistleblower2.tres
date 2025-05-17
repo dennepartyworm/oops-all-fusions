@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CogDNA" load_steps=11 format=3 uid="uid://bllyspny5k0a3"]
+
+[ext_resource type="Script" uid="uid://bb27him60xtnk" path="res://objects/battle/battle_resources/cog_attacks/cog_attack.gd" id="1_a2cre"]
+[ext_resource type="Resource" uid="uid://dxpqtt8gh5brv" path="res://objects/battle/battle_resources/cog_attacks/resources/finger_wag.tres" id="2_bqob6"]
+[ext_resource type="Resource" uid="uid://6hjcsu17tt4g" path="res://objects/battle/battle_resources/cog_attacks/resources/brain_storm.tres" id="3_tbcp6"]
+[ext_resource type="PackedScene" uid="uid://dynoamqq0xs8u" path="res://models/cogs/heads/whistleblower.glb" id="4_4yyme"]
+[ext_resource type="Texture2D" uid="uid://crmdxpsen5to" path="res://models/cogs/heads/whistleblower_WhistleblowerFinal.png" id="5_gqfj2"]
+[ext_resource type="Script" uid="uid://okjbx502s3r5" path="res://objects/cog/cogdna.gd" id="6_7s5p1"]
+[ext_resource type="Script" uid="uid://df7irk63ikx4k" path="res://objects/battle/battle_resources/status_effect.gd" id="7_7r1gm"]
+[ext_resource type="Resource" uid="uid://c8rs8upqmscoh" path="res://objects/battle/battle_resources/status_effects/resources/attentive.tres" id="8_q3fb6"]
+[ext_resource type="Resource" uid="uid://bos0wcgjeyg4w" path="res://objects/battle/battle_resources/status_effects/resources/tenure_status.tres" id="9_5ryac"]
+[ext_resource type="Resource" uid="uid://bq2178jc2wy8h" path="res://objects/battle/battle_resources/status_effects/resources/boss_logic_whistleblower.tres" id="10_jlu4i"]
+
+[resource]
+script = ExtResource("6_7s5p1")
+department = 2
+suit = 0
+cog_name = "Whistleblower"
+name_plural = ""
+name_prefix = ""
+name_suffix = ""
+head = ExtResource("4_4yyme")
+head_scale = Vector3(1, 1, 1)
+head_pos = Vector3(0.015, -0.07, 0.05)
+scale = 4.15
+head_textures = Array[Texture2D]([ExtResource("5_gqfj2")])
+hand_color = Color(0.730976, 0.763078, 0.795256, 1)
+head_color = Color(1, 1, 1, 1)
+custom_nametag_height = 0.0
+custom_nametag_suffix = "Director"
+attacks = Array[ExtResource("1_a2cre")]([ExtResource("2_bqob6"), ExtResource("3_tbcp6")])
+level_low = 20
+level_high = 20
+status_effects = Array[ExtResource("7_7r1gm")]([ExtResource("8_q3fb6"), ExtResource("9_5ryac"), ExtResource("10_jlu4i")])
+is_mod_cog = false
+is_admin = false
+health_mod = 5.952
+battle_phrases = Array[String](["I am the whistle blower"])
+external_assets = {
+&"head_model": "",
+&"head_textures": []
+}

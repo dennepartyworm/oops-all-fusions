@@ -78,7 +78,8 @@ func _ready() -> void:
 #Whenever a cog spawns normally, make it a fusion.
 func on_floor_started(game_floor: GameFloor) -> void:
 	game_floor.s_cog_spawned.connect(
-		func(cog: Cog): 
+		func(cog: Cog):
+			var currentstats = cog.stats
 			cog.fusion = true
 			cog.skelecog = false
 			print("fusing...")
@@ -95,8 +96,8 @@ func on_final_floor_started() -> void:
 			var penthouse_boss = BattleService.battle_node.get_parent()
 			var boss1 = penthouse_boss.boss_cog
 			var boss2 = penthouse_boss.boss_cog_2
-			director_fuser(boss1)
-			director_fuser(boss2)
+			cog_fuser(boss1)
+			cog_fuser(boss2)
 			#This sucks
 			directors_fuser_bad = true
 		if BattleService and is_instance_valid(BattleService.ongoing_battle):
@@ -105,7 +106,7 @@ func on_final_floor_started() -> void:
 	)
 
 #Reaching into the room and fusing the already-spawned directors with my bare hands
-func director_fuser(cog: Cog) -> void:
+func cog_fuser(cog: Cog) -> void:
 	#Various code breaks if you don't try to put their normal names back on,
 	#except their fused name still appears in game? IDK I've been here for 10 billion years
 	var currentname = cog.dna.cog_name

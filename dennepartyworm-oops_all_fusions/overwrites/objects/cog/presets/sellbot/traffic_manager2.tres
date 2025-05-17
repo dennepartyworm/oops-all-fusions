@@ -1,0 +1,42 @@
+[gd_resource type="Resource" script_class="CogDNA" load_steps=11 format=3 uid="uid://4rl3xuuei74a"]
+
+[ext_resource type="Script" uid="uid://bb27him60xtnk" path="res://objects/battle/battle_resources/cog_attacks/cog_attack.gd" id="1_50p0w"]
+[ext_resource type="Resource" uid="uid://dwkmwkdn3ws4k" path="res://objects/battle/battle_resources/cog_attacks/resources/evil_eye.tres" id="2_dqsei"]
+[ext_resource type="Resource" uid="uid://c27ek2anjbx88" path="res://objects/battle/battle_resources/cog_attacks/resources/pound_key.tres" id="3_op0f7"]
+[ext_resource type="Resource" uid="uid://wwf1notai2f8" path="res://objects/battle/battle_resources/cog_attacks/resources/power_trip.tres" id="4_kve68"]
+[ext_resource type="PackedScene" uid="uid://dpejpsndqd0fs" path="res://models/cogs/heads/traffic_manager.glb" id="5_yyhnm"]
+[ext_resource type="Script" uid="uid://okjbx502s3r5" path="res://objects/cog/cogdna.gd" id="6_lrgeu"]
+[ext_resource type="Script" uid="uid://df7irk63ikx4k" path="res://objects/battle/battle_resources/status_effect.gd" id="7_b8jq5"]
+[ext_resource type="Resource" uid="uid://c8rs8upqmscoh" path="res://objects/battle/battle_resources/status_effects/resources/attentive.tres" id="8_nj5d2"]
+[ext_resource type="Resource" uid="uid://bos0wcgjeyg4w" path="res://objects/battle/battle_resources/status_effects/resources/tenure_status.tres" id="9_fj5sd"]
+[ext_resource type="Resource" uid="uid://6jkkkmjn4jdd" path="res://objects/battle/battle_resources/status_effects/resources/boss_logic_traffic_manager.tres" id="10_60q6d"]
+
+[resource]
+script = ExtResource("6_lrgeu")
+department = 0
+suit = 2
+cog_name = "Traffic Manager"
+name_plural = ""
+name_prefix = ""
+name_suffix = ""
+head = ExtResource("5_yyhnm")
+head_scale = Vector3(1, 1, 1)
+head_pos = Vector3(0, 0, 0)
+scale = 5.0
+head_textures = Array[Texture2D]([])
+hand_color = Color(1, 1, 1, 1)
+head_color = Color(1, 1, 1, 1)
+custom_nametag_height = 0.0
+custom_nametag_suffix = "Director"
+attacks = Array[ExtResource("1_50p0w")]([ExtResource("2_dqsei"), ExtResource("3_op0f7"), ExtResource("4_kve68")])
+level_low = 15
+level_high = 20
+status_effects = Array[ExtResource("7_b8jq5")]([ExtResource("8_nj5d2"), ExtResource("9_fj5sd"), ExtResource("10_60q6d")])
+is_mod_cog = false
+is_admin = false
+health_mod = 1.0
+battle_phrases = Array[String](["I am going to manage some traffic."])
+external_assets = {
+&"head_model": "",
+&"head_textures": []
+}
